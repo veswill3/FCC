@@ -1,0 +1,45 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FCC Timestamp microservice</title>
+    <meta name="description" content="A Timestamp microservice made with Glitch for Free Code Camp">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+    <h1 class="header">
+        API Basejump: Timestamp microservice
+    </h1>
+    <blockquote>
+        User stories:
+        <ul>1) I can pass a string as a parameter, and it will check to see whether that string 
+        contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
+        <ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
+        <ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
+    </blockquote>
+    <h3>Example usage:</h3>
+    <code>https://fcc-timestamp-microserver.glitch.me/December%2015,%202015</code><br>
+    <code>https://fcc-timestamp-microserver.glitch.me/1450137600</code>
+    <h3>Example output:</h3>
+    <code>
+        {
+          "unix": 1450137600,
+          "natural": "December 15, 2015"
+        }
+    </code>
+
+  </body>
+</html>
