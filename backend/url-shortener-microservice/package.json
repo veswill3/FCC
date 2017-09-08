@@ -1,0 +1,18 @@
+{
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "url-regex": "^4.1.1"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/veswill3/FCC/tree/master/backend/url-shortener-microservice/"
+  },
+  "license": "MIT"
+}
