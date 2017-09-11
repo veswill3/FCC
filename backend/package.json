@@ -1,0 +1,23 @@
+{
+  "name": "vesper-fcc-api",
+  "version": "1.0.0",
+  "description": "freeCodeCamp backend projects backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veswill3/FCC/tree/master/backend"
+  },
+  "author": "Vesper",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.11",
+    "url-regex": "^4.1.1"
+  }
+}

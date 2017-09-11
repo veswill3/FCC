@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timestamp microservice</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        font-family: helvetica, arial, sans-serif;
+        margin: 25px;
+    }
+    code {
+        display: block;
+        background-color: #EEE;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>Timestamp microservice</h1>
+
+    <h3>User Stories</h3>
+
+    <ul>
+        <li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</li>
+        <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+        <li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+    </ul>
+
+    <h3>Usage</h3>
+
+    <p>
+        Passing a unix timestamp or a natural language date string to the
+        endpoint will return both back as JSON.
+    </p>
+    <p>
+        <a href="https://vesper-fcc-api.glitch.me/timestamp/December%2015,%20201">https://vesper-fcc-api.glitch.me/timestamp/December%2015,%20201</a>
+        <br>or<br>
+        <a href="https://vesper-fcc-api.glitch.me/timestamp/1450137600">https://vesper-fcc-api.glitch.me/timestamp/1450137600</a>
+    </p>
+
+    <p>
+        returns
+        <code>
+            {
+              "unix": 1450137600,
+              "natural": "December 15, 2015"
+            }
+        </code>
+    </p>
+
+</body>
+</html>

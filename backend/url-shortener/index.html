@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>URL Shortener Microservice</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        font-family: helvetica, arial, sans-serif;
+        margin: 25px;
+    }
+    code {
+        display: block;
+        background-color: #EEE;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>URL Shortener Microservice</h1>
+
+    <h3>User Stories</h3>
+
+    <ul>
+        <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+        <li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+        <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+    </ul>
+
+    <h3>Usage</h3>
+
+    <p>
+        You can create a new short url for
+        <code>https://www.somesuperlong.link/that-nobody/would-want?to=type</code>
+        by visiting
+        <a href="https://vesper-fcc-api.glitch.me/url-shortener/new/https://www.somesuperlong.link/that-nobody/would-want?to=type">
+            https://vesper-fcc-api.glitch.me/url-shortener/new/https://www.somesuperlong.link/that-nobody/would-want?to=type
+        </a>.
+    </p>
+
+    <p>
+        That will return something like
+        <code>
+            {
+                "original_url":"https://www.somesuperlong.link/that-nobody/would-want?to=type",
+                "short_url":"https://vesper-fcc-api.glitch.me/url-shortener/2"
+            }
+        </code>
+    </p>
+
+    <p>
+        Then, visiting <a href="https://vesper-fcc-api.glitch.me/url-shortener/2">https://vesper-fcc-api.glitch.me/url-shortener/2</a> would redirect to <a href="https://www.somesuperlong.link/that-nobody/would-want?to=type">https://www.somesuperlong.link/that-nobody/would-want?to=type</a>
+    </p>
+
+</body>
+</html>
