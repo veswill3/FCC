@@ -1,0 +1,17 @@
+{
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/veswill3/FCC/tree/master/backend/image-search-abstraction-layer"
+  },
+  "license": "MIT"
+}

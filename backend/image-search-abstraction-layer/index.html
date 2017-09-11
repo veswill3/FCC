@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search Abstraction Layer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: helvetica, arial, sans-serif;
+        margin: 25px;
+      }
+      code {
+        display: block;
+        background-color: #EEE;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Search Abstraction Layer</h1>
+    
+    <h3>User Stories</h3>
+    
+    <ul>
+      <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+      <li>I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+      <li>I can get a list of the most recently submitted search strings.</li>
+    </ul>
+    
+    <h3>Usage</h3>
+    <p>
+      You can do a basic image search. Visiting  
+      <a href="https://fcc-image-search-api.glitch.me/search/cuddly%20insects?offset=3">
+        https://fcc-image-search-api.glitch.me/search/cuddly%20insects?offset=3
+      </a>
+    
+      returns something like
+      
+      <code>
+        [
+          {
+            "url": "http://www.cuddlycollectibles.com/Animal/Animal%20Collections/Tidbitz/ap39736_set_insect_tidbitz.jpg",
+            "snippet": "Cuddly Collectibles - Collectible Dakin Plush Tidbitz Animals ...",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrdZ4xtLpMexju6uWE69eqO1lQveeWB-sOZFuTqDikJrPS1evKagOmGQ",
+            "context": "http://www.cuddlycollectibles.com/Animal/Animal%20Collections/collectible_dakin_plush_tidbitz_animals_reptiles_insects_dinosaurs_and_more.htm"
+          },
+          {
+            "url": "https://img0.etsystatic.com/032/0/6262741/il_340x270.657939574_i3q9.jpg",
+            "snippet": "Andrea Vida - AVida Toys, Budapest",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGRDhI1QQ9G-wznhTu5QXESeBxQ583o2DIbLKWdHW2WSN-CIW3VxdVjvk",
+            "context": "https://www.avidatoys.com/"
+          },
+          {
+            "url": "http://www.cuddlycollectibles.com/Animal/Insects/plush/GU60005GrasshopperWiggler.jpg",
+            "snippet": "Cuddly Collectibles - Collectible by Animal Reptiles and Insects ...",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFynF7RoOTtTEGHaA9APU-X6uheLYl2aKmqjfb4E6ObBtlqc7-1_1Zrw",
+            "context": "http://www.cuddlycollectibles.com/Animal/collectible_by_animal_plush_figurines_puppets_snow_globes_purses_and_more.htm"
+          },
+          {
+            "url": "https://img0.etsystatic.com/132/0/6262741/il_340x270.1008287982_fdys.jpg",
+            "snippet": "Andrea Vida - AVida Toys, Budapest",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLsueh6N2ZhqnERTfyYStR0TzgSgqtqz5jsOaP5Pjip5Yv-4ehnu2TEmw",
+            "context": "https://www.avidatoys.com/"
+          },
+          {
+            "url": "http://www.strapya-world.com/pic/2014/390-104228img06.jpg",
+            "snippet": "Strapya World : Insect Plush Doll (Rhinoceros Beetle/28cm)",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW5YSdMCnJYq_3LU_qV4Q7lCMT1wcXGBo0wPcLrV2ArVLecbxcBGYGNXI",
+            "context": "http://www.strapya-world.com/products/71558.html"
+          },
+          {
+            "url": "https://img0.etsystatic.com/132/0/6262741/il_680x540.1008287982_fdys.jpg",
+            "snippet": "Frogs Insects and Fish - Andrea Vida - AVida Toys, Budapest",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH-xSJ6VY1Th-lM_4Wp6Zr9V3oUGkucCeYn-BH1KRmoopj7eFjCPhtW3bV",
+            "context": "https://www.avidatoys.com/shop/14850171/frogs-insects-and-fish"
+          },
+          {
+            "url": "https://s-media-cache-ak0.pinimg.com/736x/fd/93/46/fd93465f7253b9c4b4fa026778652bbf--moth-insects.jpg",
+            "snippet": "943 best Cuddly Insects images on Pinterest",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpz-T2iEtleLG_9mfac2TV2LccWpnSLGc_mhBIr2UEgh_5TF1Kr35UCH66",
+            "context": "https://www.pinterest.co.uk/annienijdam/cuddly-insects/"
+          },
+          {
+            "url": "https://img0.etsystatic.com/132/0/6262741/il_fullxfull.1008287982_fdys.jpg",
+            "snippet": "Honey Bee - Plush Toy, Soft Plush Bug, Cuddly Insect",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNP1w-fKE1cp2-CBJiE17OVatb2kfyQjZPXLmp1yXrssB2RtZQQuU_zls",
+            "context": "https://www.avidatoys.com/listing/452409982/honey-bee-plush-toy-soft-plush-bug"
+          },
+          {
+            "url": "https://s-media-cache-ak0.pinimg.com/736x/ec/db/35/ecdb356f1c426ece95535ab065acf272.jpg",
+            "snippet": "17 Best images about Cuddly Insects on Pinterest | Brooches ...",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlzeppOl1w8kp3I1Mj2xt6VkqKJoetRd-e_2JjmG8mQHmAUFOU8WOQ2rQ",
+            "context": "https://www.pinterest.com/annienijdam/cuddly-insects/"
+          },
+          {
+            "url": "https://images-na.ssl-images-amazon.com/images/I/71DqAQDWDyL._SX355_.jpg",
+            "snippet": "Amazon.com: Puzzled Sitting Bee Super Soft Stuffed Plush Cuddly ...",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgWhgxAFG-Y2hm3o3JZDs53v1CMut2aiP-ISyRdwEKLaCeXhF_-zkKPg",
+            "context": "https://www.amazon.com/Puzzled-Sitting-Stuffed-Cuddly-Animal/dp/B0115V2MJE"
+          }
+        ]
+      </code>
+    </p>
+    
+    <p>
+      You can also see the 10 most recent serches. Visiting 
+      
+      <a href="https://fcc-image-search-api.glitch.me/latest/">https://fcc-image-search-api.glitch.me/latest/</a>
+      
+      returns something like
+    
+      <code>
+        [
+          { "term": "cuddly insects", "when": "2017-09-11T00:16:56.033Z" },
+          { "term": "wizard", "when": "2017-09-11T00:17:25.843Z" },
+          { "term": "waterbottle", "when": "2017-09-11T00:27:11.255Z" },
+          { "term": "Dachshund", "when": "2017-09-11T00:27:20.023Z" },
+          { "term": "three armed T-rex", "when": "2017-09-11T00:27:38.545Z" },
+          { "term": "cucumber", "when": "2017-09-11T00:27:48.808Z" },
+          { "term": "shaman", "when": "2017-09-11T00:27:56.979Z" },
+          { "term": "big bird", "when": "2017-09-11T00:28:05.210Z" },
+          { "term": "antique bag", "when": "2017-09-11T00:28:13.314Z" },
+          { "term": "wizard committee", "when": "2017-09-11T00:28:20.555Z" }
+        ]
+      </code>
+    </p>
+
+  </body>
+</html>
