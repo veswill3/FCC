@@ -6,6 +6,7 @@ app.use(require('./timestamp'));
 app.use(require('./req-head-parser'));
 app.use(require('./url-shortener'));
 app.use(require('./image-search'));
+app.use(require('./file-metadata'));
 
 app.get('/', function (request, response) {
     response.sendFile(__dirname + '/index.html');

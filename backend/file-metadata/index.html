@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>File Metadata Microservice</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        font-family: helvetica, arial, sans-serif;
+        margin: 25px;
+    }
+    code {
+        display: block;
+        background-color: #EEE;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>File Metadata Microservice</h1>
+
+    <h3>User Stories</h3>
+
+    <ul>
+        <li>I can submit a FormData object that includes a file upload.</li>
+        <li>When I submit something, I will receive the file size in bytes within the JSON response.</li>
+    </ul>
+
+    <h3>Usage</h3>
+
+    <form action="/file-metadata/get-file-size" method="post" enctype="multipart/form-data">
+        <input type="file" name="file-upload">
+        <input type="submit">
+    </form>
+
+    <p>
+        The above form submits to the 'get-file-size' endpoint and will send back a JSON object with the file size in bytes, similar to below.
+        <code>
+            { "size": 4809 }
+        </code>
+    </p>
+
+</body>
+</html>
