@@ -1,0 +1,25 @@
+{
+  "name": "fcc-voting-app-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
+    "react-router-prop-types": "^0.0.2",
+    "recharts": "^1.0.0-apha.5",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.73.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.13"
+  },
+  "proxy": "http://localhost:3001/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
