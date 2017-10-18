@@ -17,3 +17,7 @@ It should be live at [https://vesper-fcc-stockmarket.glitch.me/](https://vesper-
 ## Goals
 
 - [X] This project needs to be responsive and mobile friendly
+
+## Notable Technologies
+
+WebSockets, [Highcharts](https://www.highcharts.com/), and Yahoo Finance.

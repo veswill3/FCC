@@ -18,12 +18,28 @@ It should be live at [https://vesper-fcc-voting-app.glitch.me/](https://vesper-f
 
 ## Goals
 
-- Continue leveraging Mongo, Node, and Express on the back end
-- Experiment with React on the front end
-- Client will communicate with the server via REST API
-- Add a linter and build process
-- Include unit tests for the back end (will experiment with front end tests on the next project)
-- Do NOT use a boilerplate
+- [X] Continue leveraging Mongo, Node, and Express on the back end
+- [X] Experiment with React on the front end
+- [X] Client will communicate with the server via REST API
+- [X] Add a linter and build process
+- [X] Include unit tests for the back end (will experiment with front end tests on the next project)
+- [ ] Do NOT use a boilerplate
+
+## Notable Technologies
+
+- Tools
+  - ESLint (airbnb)
+  - concurrently to start client and server
+  - nodemon to watch for changes and restart the server
+- Backend
+  - Express
+  - Mongoose ORM for MongoDB
+  - JsonWebToken, Passport, and bcrypt for authentication
+  - Mocha and Chai for backend unit tests
+- Frontend
+  - React with create-react-app for easy setup and tooling
+  - Semantic UI (via semantic-ui-react)
+  - [Recharts](http://recharts.org/#/en-US/) for react
 
 ## Lessons Learned
 

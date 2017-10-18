@@ -18,9 +18,27 @@ Hint: Try using the Yelp API to find venues in the cities your users search for.
 
 ## Goals
 
-- Continue with the MERN stack
-- Leverage front end testing, in addition to back end testing
-- Focus on rapid development instead of constant learning for this project
+- [X] Continue with the MERN stack
+- [X] Leverage front end testing, in addition to back end testing
+- [X] Focus on rapid development instead of constant learning for this project
+
+## Notable Technologies
+
+- Tools
+  - ESLint (airbnb)
+  - concurrently to start client and server
+  - nodemon to watch for changes and restart the server
+- Backend
+  - Express
+  - Mongoose ORM for MongoDB
+  - JsonWebToken, Passport, and bcrypt for authentication
+  - Mocha and Chai for backend unit tests
+  - Proxyquire to mock/stub imports
+  - Yelp API (via yelp-fusion)
+- Frontend
+  - React with create-react-app for easy setup and tooling
+  - Semantic UI (via semantic-ui-react)
+  - Jest with Enzyme for front end unit tests
 
 ## Lessons Learned
 
