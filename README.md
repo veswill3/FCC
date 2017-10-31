@@ -41,3 +41,12 @@ Track historical stock prices with a fancy chart.
 - WebSockets keep charts in sync across devices in real time.
 - Financial data is retrieved from Yahoo's financial API.
 - No frontend libraries this time
+
+### Manage a Book Trading Club ([Link](backend/dynamicWebApps/bookTradingClub/))
+
+BookShare allows you find a better home for your dusty books while you look for something new to read.
+
+- Search for virtually any book using the Google Books API
+- Add your location with zippopotam so you can filter for books that are nearby
+- Discover and request books from other users
+- Accept (or reject) trade requests from
