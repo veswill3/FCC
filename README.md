@@ -50,3 +50,12 @@ BookShare allows you find a better home for your dusty books while you look for 
 - Add your location with zippopotam so you can filter for books that are nearby
 - Discover and request books from other users
 - Accept (or reject) trade requests from
+
+### Build a Pinterest Clone ([Link](backend/dynamicWebApps/pinterestClone/))
+
+Browse interesting photos submitted by others, vote on the best ones, and submit your own.
+
+- Like and unlike to your hearts content
+- Find all the images you have shared or browse the galleries submitted by others
+- Broken image detection automatically swaps the image for a placeholder
+- Delete any of the images that you submitted

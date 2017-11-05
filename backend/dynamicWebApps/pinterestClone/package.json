@@ -1,0 +1,48 @@
+{
+  "name": "pinterestclone",
+  "version": "1.0.0",
+  "description": "freeCodeCamp pinterest clone",
+  "main": "server/server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js --ignore client/",
+    "client": "cd client && npm start",
+    "test": "NODE_ENV=test mocha -- server/tests/",
+    "lint": "eslint ./"
+  },
+  "engines": {
+    "node": "8.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veswill3/FCC/tree/master/backend/dynamicWebApps/pinterestClone"
+  },
+  "author": "Vesper",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "bcrypt": "^1.0.3",
+    "jsonwebtoken": "^8.1.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "mongoose": "^4.12.3",
+    "mongoose-type-url": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1",
+    "concurrently": "^3.5.0",
+    "mocha": "^3.5.3",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.9.0",
+    "babel-eslint": "^8.0.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  }
+}
