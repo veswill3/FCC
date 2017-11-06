@@ -43,7 +43,7 @@ const NavBarMobile = ({
       <Menu fixed="top" inverted>
         <Menu.Item as={Link} header to="/gallery">
           <Image size="mini" src={logo} style={{ marginRight: '1.5em' }} />
-          BookShare
+          FCC Pinterest Clone
         </Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item onClick={onToggle}>
@@ -73,7 +73,7 @@ const NavBarDesktop = ({ leftItems, rightItems }) => (
   <Menu fixed="top" inverted>
     <Menu.Item as={Link} header to="/gallery">
       <Image size="mini" src={logo} style={{ marginRight: '1.5em' }} />
-      BookShare
+      FCC Pinterest Clone
     </Menu.Item>
     {leftItems.map(item => <Menu.Item {...item} />)}
     <Menu.Menu position="right">
