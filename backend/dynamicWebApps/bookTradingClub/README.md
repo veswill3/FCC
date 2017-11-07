@@ -7,6 +7,8 @@ Build a full stack JavaScript app that is functionally similar to this: http://b
 
 It should be live at https://bookshare.glitch.me/.
 
+![Manage pending trades](screenshot.png?raw=true "Manage pending trades")
+
 ## User Stories
 
 - I can view all books posted by every user.

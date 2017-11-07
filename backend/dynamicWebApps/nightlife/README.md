@@ -7,6 +7,8 @@ Build a full stack JavaScript app that is functionally similar to this: https://
 
 It should be live at [https://vesper-fcc-nightlife.glitch.me](https://vesper-fcc-nightlife.glitch.me).
 
+![See which places are popular tonight](screenshot.png?raw=true "See which places are popular tonight")
+
 ## User Stories
 
 - As an unauthenticated user, I can view all bars in my area.

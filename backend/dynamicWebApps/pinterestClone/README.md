@@ -7,6 +7,8 @@ Build a full stack JavaScript app that is functionally similar to this: https://
 
 It should be live at https://vcw-fcc-pinterest.glitch.me/
 
+![Share images](screenshot.png?raw=true "Share images")
+
 ## User Stories
 
 - As an unauthenticated user, I can login with ~Twitter~. (I dont use twitter so it is just username/pass)

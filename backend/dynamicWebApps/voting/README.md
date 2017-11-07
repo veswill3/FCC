@@ -5,6 +5,8 @@ Objective: Build a full stack JavaScript app that is functionally similar to thi
 
 It should be live at [https://vesper-fcc-voting-app.glitch.me/](https://vesper-fcc-voting-app.glitch.me/).
 
+![View Poll results](screenshot.png?raw=true "View Poll results")
+
 ## User Stories
 
 - As an authenticated user, I can keep my polls and come back later to access them.

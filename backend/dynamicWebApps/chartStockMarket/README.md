@@ -7,6 +7,8 @@ Build a full stack JavaScript app that is functionally similar to this: http://w
 
 It should be live at [https://vesper-fcc-stockmarket.glitch.me/](https://vesper-fcc-stockmarket.glitch.me/).
 
+![Chart the stock market](screenshot.png?raw=true "Chart the stock market")
+
 ## User Stories
 
 - I can view a graph displaying the recent trend lines for each added stock.
